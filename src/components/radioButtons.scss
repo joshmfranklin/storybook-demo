@@ -1,0 +1,76 @@
+@import '../assets/uswds-2.0.1/scss/uswds.scss';
+
+.radio-block,
+.checkbox-block {
+  max-width: 46rem;
+}
+
+
+.usa-radio__label,
+.usa-checkbox__label{
+  padding: 1rem;
+  @include u-border('base-light', 1px);
+  border-radius: 4px;
+  max-width: 46rem;
+  background-color: white;
+
+  &:hover {
+    @include u-bg('base-lightest');
+  }
+}
+
+[type=checkbox]+label.simple-checkbox,
+[type=radio]+label.simple-checkbox {
+  border: none;
+  padding: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.usa-radio__input:checked+.usa-radio__label,
+.usa-checkbox__input:checked+.usa-checkbox__label {
+  @include u-bg('success');
+  @include u-border('success-dark');
+  color: white;
+}
+
+.usa-radio__input:checked+.usa-radio__label.simple-checkbox,
+.usa-checkbox__input:checked+.usa-checkbox__label.simple-checkbox {
+  background: none;
+  border: none;
+}
+
+.usa-radio__input:disabled+.usa-radio__label,
+.usa-checkbox__input:disabled+.usa-checkbox__label {
+  border-color: red;
+  opacity: .35;
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: white;
+  }
+}
+
+.usa-radio__label:before,
+.usa-checkbox__label:before {
+  position: absolute;
+}
+
+.usa-radio__label span,
+.usa-checkbox__label span{
+  padding-left: 6rem;
+  display: block;
+}
+
+.usa-checkbox-radio-error .usa-radio__label,
+.usa-checkbox-radio-error .usa-checkbox__label {
+  @include u-border('error', 2px);
+}
+
+.usa-checkbox__label:before, .usa-radio__label:before {
+  left: 1rem;
+}
