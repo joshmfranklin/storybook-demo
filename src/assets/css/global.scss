@@ -1,0 +1,8 @@
+@import '../uswds-2.0.1/scss/uswds.scss';
+
+legend {
+	@include u-font-family('serif');
+	font-weight: 700;
+	font-size: 1.7rem;
+	margin-bottom: 1rem;
+}
