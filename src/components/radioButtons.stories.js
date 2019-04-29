@@ -59,4 +59,18 @@ storiesOf('Radio Buttons', module)
 		}
 	)
 	.add('Disabled', () => <RadioButtons data={data} disabled={true}/>)
-	.add('Inline', () => <RadioButtonsInline data={data2} />)
+	.add('Inline', () => <RadioButtonsInline data={data2} />,
+		{ info: { 
+			text: `
+**When to use**
+- When applicants need to choose “yes” or “no”
+- When the list of options is less than or equal to 3.
+
+**When to consider something different**
+- If the list of options is greater than 3
+
+**Guidance**
+- Applicants should be able to tap on or click on either the text label or the radio button to select or deselect an option.
+			`}
+		}
+	)
