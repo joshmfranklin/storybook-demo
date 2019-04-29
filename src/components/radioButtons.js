@@ -8,7 +8,7 @@ export class RadioButtons extends React.Component {
 				<legend>Provide relative type</legend>
 				{this.props.data.map((data) =>
 					<div className="usa-radio">
-						<input id={data.id} type="radio" className="usa-radio__input" name={data.group} value={data.value}/>
+						<input id={data.id} type="radio" className="usa-radio__input" name={data.group} value={data.value} disabled={this.props.disabled}/>
 						<label htmlFor={data.id} className="usa-radio__label"><span>{data.option}</span></label>
 					</div>
 				)}

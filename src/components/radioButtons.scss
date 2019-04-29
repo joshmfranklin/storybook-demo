@@ -46,7 +46,7 @@
 
 .usa-radio__input:disabled+.usa-radio__label,
 .usa-checkbox__input:disabled+.usa-checkbox__label {
-  border-color: red;
+  border-color: u-border('base-lightest');
   opacity: .35;
   cursor: not-allowed;
 
@@ -73,4 +73,18 @@
 
 .usa-checkbox__label:before, .usa-radio__label:before {
   left: 1rem;
+}
+
+.radioInline {
+  display: flex;
+  flex-direction: row;
+
+  .usa-radio {
+    flex: 1;
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }

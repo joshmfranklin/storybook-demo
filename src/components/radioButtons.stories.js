@@ -1,6 +1,7 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 import RadioButtons from './radioButtons'
+import RadioButtonsInline from './radioButtonsInline'
 
 export const data = [
 	{
@@ -23,8 +24,23 @@ export const data = [
 	}
 ]
 
-storiesOf('Form controls', module)
-	.add('Radio buttons', () => <RadioButtons data={data}/>,
+export const data2 = [
+	{
+		option: "Yes",
+		id: "yes",
+		group: "yes-no",
+		value: "yes"
+	},
+	{
+		option: "No",
+		id: "no",
+		group: "yes-no",
+		value: "no"
+	}
+]
+
+storiesOf('Radio Buttons', module)
+	.add('Default', () => <RadioButtons data={data}/>,
 		{ info: { 
 			text: `
 **When to use**
@@ -42,3 +58,5 @@ storiesOf('Form controls', module)
 			`}
 		}
 	)
+	.add('Disabled', () => <RadioButtons data={data} disabled={true}/>)
+	.add('Inline', () => <RadioButtonsInline data={data2} />)
